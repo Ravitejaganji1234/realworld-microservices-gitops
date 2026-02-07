@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: realworld-prod
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/Ravitejaganji1234/realworld-microservices-gitops.git
+    targetRevision: main
+    path: argocd-prod
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: realworld-prod
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
