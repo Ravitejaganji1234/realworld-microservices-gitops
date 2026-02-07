@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: catalog-service
-        image: us-central1-docker.pkg.dev/PROJECT_ID/realworld-repo/catalog-service:TAG
+        image: us-east1-docker.pkg.dev/test-12625323/raviteja-demo/catalog-service:TAG
         ports:
         - containerPort: 8083
         env:

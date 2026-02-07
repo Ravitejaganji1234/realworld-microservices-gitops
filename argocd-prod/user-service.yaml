@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: us-central1-docker.pkg.dev/PROJECT_ID/realworld-repo/user-service:TAG
+        image: us-east1-docker.pkg.dev/test-12625323/raviteja-demo/user-service:TAG
         ports:
         - containerPort: 8081
         env:

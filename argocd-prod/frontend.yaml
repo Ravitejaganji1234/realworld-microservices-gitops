@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: us-central1-docker.pkg.dev/PROJECT_ID/realworld-repo/frontend:TAG
+        image: us-east1-docker.pkg.dev/test-12625323/raviteja-demo/frontend:TAG
         ports:
         - containerPort: 80
         env:
@@ -26,6 +26,7 @@ kind: Service
 metadata:
   name: frontend
 spec:
+  type: LoadBalancer
   selector:
     app: frontend
   ports:
