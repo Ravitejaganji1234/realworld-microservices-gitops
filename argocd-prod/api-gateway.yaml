@@ -29,9 +29,10 @@ spec:
           httpGet:
             path: /actuator/health
             port: 8085
-          initialDelaySeconds: 20
-          periodSeconds: 5
+          initialDelaySeconds: 90
+          periodSeconds: 20
           failureThreshold: 3
+          timeoutSeconds: 5
 
 ---
 apiVersion: v1
