@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: user-service
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: user-service
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: us-east1-docker.pkg.dev/test-12625323/raviteja-demo/user-service:4
+        image: us-east1-docker.pkg.dev/test-12625323/gke-microservice/user-service:4
         ports:
         - containerPort: 8081
         env:

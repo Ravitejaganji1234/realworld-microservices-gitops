@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: frontend
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: us-east1-docker.pkg.dev/test-12625323/raviteja-demo/frontend:4
+        image: us-east1-docker.pkg.dev/test-12625323/gke-microservice/frontend:4
         ports:
         - containerPort: 80
         env:
