@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: us-east1-docker.pkg.dev/test-12625323/raviteja-demo/api-gateway:TAG
+        image: us-east1-docker.pkg.dev/test-12625323/raviteja-demo/api-gateway:4
         ports:
         - containerPort: 8085
         env:
