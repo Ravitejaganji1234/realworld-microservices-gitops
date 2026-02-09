@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: us-east1-docker.pkg.dev/test-12625323/gke-microservice/api-gateway:6
+        image: us-east1-docker.pkg.dev/test-12625323/gke-microservice/api-gateway:7
         ports:
         - containerPort: 8085
         env:
