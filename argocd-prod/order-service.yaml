@@ -36,3 +36,4 @@ spec:
     app: order-service
   ports:
     - port: 8082
+      targetPort: 8082

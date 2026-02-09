@@ -34,3 +34,4 @@ spec:
     app: catalog-service
   ports:
     - port: 8083
+      targetPort: 8083
