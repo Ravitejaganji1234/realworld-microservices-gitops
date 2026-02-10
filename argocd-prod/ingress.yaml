@@ -41,7 +41,7 @@ spec:
           service:
             name: api-gateway
             port:
-              number: 8085
+              number: 80
       - path: /                        # Changed: added /*
         pathType: Prefix  # Changed: was Prefix
         backend:
