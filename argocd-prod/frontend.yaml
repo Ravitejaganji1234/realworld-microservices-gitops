@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: us-east1-docker.pkg.dev/test-12625323/gke-microservice/frontend:10
+        image: us-east1-docker.pkg.dev/test-12625323/gke-microservice/frontend:11
         ports:
         - containerPort: 80
         env:
