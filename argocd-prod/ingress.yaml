@@ -35,7 +35,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /api/*                    # Changed: added /*
+      - path: /api                  # Changed: added /*
         pathType: Prefix  # Changed: was Prefix
         backend:
           service:
