@@ -1,3 +1,29 @@
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: realworld-ingress
+#   annotations:
+#     kubernetes.io/ingress.class: "gce"
+# spec:
+#   rules:
+#   - http:
+#       paths:
+#       - path: /api
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: api-gateway
+#             port:
+#               number: 8085
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: frontend
+#             port:
+#               number: 80
+
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -8,15 +34,15 @@ spec:
   rules:
   - http:
       paths:
-      - path: /api
-        pathType: Prefix
+      - path: /api/*                    # Changed: added /*
+        pathType: ImplementationSpecific  # Changed: was Prefix
         backend:
           service:
             name: api-gateway
             port:
               number: 8085
-      - path: /
-        pathType: Prefix
+      - path: /*                         # Changed: added /*
+        pathType: ImplementationSpecific  # Changed: was Prefix
         backend:
           service:
             name: frontend
