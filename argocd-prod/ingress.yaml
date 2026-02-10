@@ -30,19 +30,20 @@ metadata:
   name: realworld-ingress
   annotations:
     kubernetes.io/ingress.class: "gce"
+    kubernetes.io/ingress.allow-http: "true"
 spec:
   rules:
   - http:
       paths:
       - path: /api/*                    # Changed: added /*
-        pathType: ImplementationSpecific  # Changed: was Prefix
+        pathType: Prefix  # Changed: was Prefix
         backend:
           service:
             name: api-gateway
             port:
               number: 8085
-      - path: /*                         # Changed: added /*
-        pathType: ImplementationSpecific  # Changed: was Prefix
+      - path: /                        # Changed: added /*
+        pathType: Prefix  # Changed: was Prefix
         backend:
           service:
             name: frontend
