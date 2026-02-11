@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: us-east1-docker.pkg.dev/test-12625323/gke-microservice/user-service:2
+        image: us-east1-docker.pkg.dev/test-12625323/gke-microservice/user-service:3
         ports:
         - containerPort: 8081
         env:

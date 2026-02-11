@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: catalog-service
-        image: us-east1-docker.pkg.dev/test-12625323/gke-microservice/catalog-service:2
+        image: us-east1-docker.pkg.dev/test-12625323/gke-microservice/catalog-service:3
         ports:
         - containerPort: 8083
         env:
