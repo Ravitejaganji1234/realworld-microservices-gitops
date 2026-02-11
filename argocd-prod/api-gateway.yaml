@@ -60,13 +60,16 @@ metadata:
   namespace: realworld-prod
   annotations:
     cloud.google.com/backend-config: '{"ports": {"http":"api-gateway-backendconfig"}}'
+spec:
   type: ClusterIP
   selector:
     app: api-gateway
   ports:
     - name: http
+      protocol: TCP
       port: 80
       targetPort: 8085
+
 
 ---
 
