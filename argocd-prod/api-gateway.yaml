@@ -88,5 +88,5 @@ spec:
     healthyThreshold: 1
     unhealthyThreshold: 3
     requestPath: /actuator/health
-    port: 80
+    port: 8085
     type: HTTP
