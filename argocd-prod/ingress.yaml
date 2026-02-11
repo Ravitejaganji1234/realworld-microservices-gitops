@@ -35,15 +35,15 @@ spec:
   rules:
   - http:
       paths:
-      - path: /api                  # Changed: added /*
-        pathType: Prefix  # Changed: was Prefix
+      - path: /api                  
+        pathType: Prefix  
         backend:
           service:
             name: api-gateway
             port:
               number: 80
-      - path: /                        # Changed: added /*
-        pathType: Prefix  # Changed: was Prefix
+      - path: /                        
+        pathType: Prefix  
         backend:
           service:
             name: frontend
