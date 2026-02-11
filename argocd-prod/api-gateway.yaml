@@ -59,8 +59,7 @@ metadata:
   name: api-gateway
   namespace: realworld-prod
   annotations:
-    cloud.google.com/backend-config: '{"default":"api-gateway-backendconfig"}'
-spec:
+    cloud.google.com/backend-config: '{"ports": {"http":"api-gateway-backendconfig"}}'
   type: ClusterIP
   selector:
     app: api-gateway
